@@ -36,7 +36,8 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jenkinsx.homelab.local
+    externalDNS: true
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
@@ -48,7 +49,7 @@ jxRequirements:
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
-  enabled: false
+  enabled: true
 jxRequirementsIngressTLS:
   enabled: false
 jxRequirementsKuberhealthy:
