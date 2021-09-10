@@ -17,16 +17,21 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: dalwar23
+    repository: jx3
   - key: staging
   - key: production
   ingress:
-    domain: "jenkinsx.homelab.local"
+    domain: jenkinsx.homelab.local
     externalDNS: true
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: dalwar23
   repository: bucketrepo
   secretStorage: local
   vault: {}
